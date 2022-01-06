@@ -7,3 +7,5 @@ Sample project is created to reproduce issue https://github.com/SpecFlowOSS/Spec
 ![image](https://user-images.githubusercontent.com/58924136/148332599-13ecb9f4-7aaa-4676-8694-a20f59b7be69.png)
 
 ![image](https://user-images.githubusercontent.com/58924136/148332619-cc204737-8a01-4861-8a57-a5edc9e56d5a.png)
+
+![image](https://user-images.githubusercontent.com/58924136/148334199-52385af5-8983-4bb6-abb0-de75f27e06e2.png)
