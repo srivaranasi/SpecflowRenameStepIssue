@@ -37,10 +37,17 @@ namespace SpecflowRenameStepIssue.Steps
             searchPage.searchButton.Click();
         }
 
-        [Then(@"I should see resluts pages")]
+        [Then(@"I should see resluts page")]
         public void ThenIShouldSeeReslutsPages()
         {
             searchPage.resultStats.Text.Should().Contain("About");
         }
+
+        [Then(@"I should see resluts page contains ""([^""]*)""")]
+        public void ThenIShouldSeeReslutsPageContains(string assertText)
+        {
+            searchPage.resultStats.Text.Should().Contain(assertText);
+        }
+
     }
 }

@@ -1,12 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <TargetFramework>net5.0</TargetFramework>
-
+    <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  <Target Name="SpicNSpan" AfterTargets="Clean">
+    <RemoveDir Directories="$(OUTDIR)" />
+  </Target>
 
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BoDi" Version="1.5.0" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
@@ -21,6 +32,16 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.22" />
     <PackageReference Include="Selenium.WebDriver" Version="4.0.0" />
     <PackageReference Include="Selenium.Support" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Scripts\TestExecutionTrigger.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
